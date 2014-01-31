@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Book Bazaar{% endblock %}
+{% block body %}
+<ul>
+	<li>Contact: {{book.contact}}</li>
+	<li>Price: {{book.price}}</li>
+	<li>Title: {{book.title}}</li>
+	<li>Author: {{book.author}}</li>
+	<li>ISBN: {{book.isbn}}</li>
+	<li>Condition: {{book.condition}}</li>
+	<li>Class: {{book.subject}}{{book.course_num}}</li>
+{% endblock %}

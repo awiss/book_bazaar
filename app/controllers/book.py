@@ -23,5 +23,6 @@ def add(self,request):
 		return redirect('/')
 
 def view_book(self,request,book_id):
-	#Todo
-	return redirect('/')
+	entry = self.mysql_session.query(Book).filter_by(id=book_id).first()
+	print entry
+	return self.render_template('book.html',book=entry)

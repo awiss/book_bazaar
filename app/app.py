@@ -23,9 +23,7 @@ class Bazaar(object):
     # and thus be passed self as a parameter
     def bind_route(self,route,controller):
         self.url_map.add(Rule(route,endpoint=controller.__name__))
-        def wrapper(self,request):
-            return controller(self,request)
-        setattr(self,'on_'+controller.__name__,MethodType(wrapper,self))
+        setattr(self,'on_'+controller.__name__,MethodType(controller,self))
 
 
     def __init__(self, config):
