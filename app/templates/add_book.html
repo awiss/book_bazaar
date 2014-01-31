@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}Book Bazaar{% endblock %}
+{% block body %}
+<form method='post' action='/add_book'>
+	Your Name: <input name='contact'>
+	Price: <input name="price" type="number" step="0.01" min="0.01" max="1000">
+	Title: <input name="title" type="text">
+	Author: <input name="author" type="text">
+	Condition: <input name="condition" type="text">
+	ISBN: <input name="isbn" type="text">
+	Department:
+	<select name="subject">
+		<option value="ESE">ESE</option>
+		<option value="CIS">CIS</option>
+	</select>
+	Course Number:
+	<select name="course_num">
+		<option value="101">101</option>
+		<option value="102">102</option>
+	</select>
+	<input type="submit">
+</form>
+{% endblock %}
